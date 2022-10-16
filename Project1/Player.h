@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <array>
 
@@ -16,8 +17,8 @@ public:
 class Bot :public Player
 {	
 
-//public:
-//	Bot(int money);
+public:
+	Bot(int money);
 
 public:
 
@@ -38,9 +39,9 @@ private:
 class User :public Player
 {
 
-//public:
-//	User(int money, string id);
-//
+public:
+	User(int money, string id);
+
 public:
 
 	void SetHand(int card);

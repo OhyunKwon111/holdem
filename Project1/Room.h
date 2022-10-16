@@ -30,6 +30,6 @@ private:
 	int bot_money = 500000;
 	Login* plogin;
 	Deck* deck;
-	vector<Player>player_list;
+	vector<Player*>player_list;
 };
 
