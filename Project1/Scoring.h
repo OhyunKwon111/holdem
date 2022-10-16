@@ -1,10 +1,8 @@
 #pragma once
 #include <array>
-#include <iostream>
-#include <random>
-
-using namespace std;
-
+#include <map>
+#include <vector>
+#include <string>
 //카드 숫자 
 
 #define card_num_2 0x0001		// 카드숫자 2	0000 0000  0000 0000  0000 0000  0000 0001 
@@ -30,7 +28,7 @@ using namespace std;
 #define card_pic_clover 0x80000
 #define card_pic_sum 983040
 
-//족보
+//족보 1048576
 #define one_pair 0x100000
 #define two_pair 0x200000
 #define three_pair 0x400000
@@ -40,19 +38,24 @@ using namespace std;
 #define four_pair 0x4000000
 #define straight_Flush 0x8000000
 
-class Deck
+
+using namespace std;
+
+class Scoring
 {
 
 public:
-	Deck();
-	~Deck() {};
-	void GetDeck();
-	void DeckShuffle(int num);
-	int GetCard(int card_order);
+	Scoring(array<int, 7> &hand);
+
+public:
+	void PairCheck();
+	void ChangeScore(int change_score);
+	int GetScore();
 
 private:
-	array<int, 13> card_num;
-	array<int, 4> card_pic;
-	array<int, 52> deck;
+	const static int maximum_number_of_cards = 7;
+	array<int, maximum_number_of_cards >cards;
+	map<int, int>num_change;
+	map<int, string>pic_change;
+	int score = 0;
 };
-

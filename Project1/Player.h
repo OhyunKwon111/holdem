@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <array>
-
+#include "Scoring.h"
 
 using namespace std;
 
@@ -9,6 +9,7 @@ class Player
 {
 public:
 	virtual void SetHand(int card) = 0;
+	virtual int GetScore() = 0;
 };
 
 
@@ -23,14 +24,14 @@ public:
 public:
 
 	void SetHand(int card);
-
+	int GetScore();
 
 private:
-	int PlayerMoney;
-	int Score = 0;
-	int NumberOfCards = 0;
-	const static int MaximumNumberOdCards = 7;
-	array<int, MaximumNumberOdCards >Hand;
+	int player_money;
+	int score = 0;
+	int number_of_cards = 0;
+	const static int maximum_number_of_cards = 7;
+	array<int, maximum_number_of_cards >hand;
 	
 };
 
@@ -45,13 +46,14 @@ public:
 public:
 
 	void SetHand(int card);
-
+	int GetScore();
 
 private:
-	int PlayerMoney;
-	int Score = 0;
+
 	string UserId;
-	int NumberOfCards = 0;
-	const static int MaximumNumberOdCards = 7;
-	array<int, MaximumNumberOdCards >Hand;
+	int player_money;
+	int score = 0;
+	int number_of_cards = 0;
+	const static int maximum_number_of_cards = 7;
+	array<int, maximum_number_of_cards >hand;
 };

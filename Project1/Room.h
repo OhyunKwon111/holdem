@@ -6,7 +6,7 @@
 #include "Deck.h"
 #include "Login.h"
 #include "Player.h"
-
+#include <algorithm>
 
 using namespace std;
 
@@ -18,6 +18,7 @@ public:
 	void Play();
 	void Deal();
 	void Bet();
+	void ScoreComparison();
 
 private:
 	int shuffle_num = 1000;
@@ -31,5 +32,6 @@ private:
 	Login* plogin;
 	Deck* deck;
 	vector<Player*>player_list;
+	vector<int>score_list;
 };
 
