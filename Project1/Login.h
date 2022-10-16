@@ -15,10 +15,10 @@ public:
 	Login();
 	~Login();
 
-	string Get_player_list(int num);
+	string GetPlayerList(int num);
 	bool Confirm();
-	bool Get_id(string& id);
-	bool Get_money(int& money);
+	string GetId();
+	int GetMoney();
 	
 
 private:

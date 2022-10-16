@@ -30,14 +30,14 @@ using namespace std;
 
 
 //Á·º¸
-#define One_pair 0x100000
-#define Two_pair 0x200000
-#define Three_pair 0x400000
-#define Straight 0x800000
-#define Flush 0x1000000
-#define Full_house 0x2000000
-#define Four_pair 0x4000000
-#define Straight_Flush 0x8000000
+#define one_pair 0x100000
+#define two_pair 0x200000
+#define three_pair 0x400000
+#define straight 0x800000
+#define flush 0x1000000
+#define full_house 0x2000000
+#define four_pair 0x4000000
+#define straight_Flush 0x8000000
 
 class Deck
 {
@@ -45,8 +45,9 @@ class Deck
 public:
 	Deck();
 	~Deck() {};
-	void Get_deck();
-	void Deck_shuffle(int num);
+	void GetDeck();
+	void DeckShuffle(int num);
+	int GetCard(int card_order);
 
 private:
 	array<int, 13> card_num;
