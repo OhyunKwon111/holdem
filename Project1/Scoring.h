@@ -49,8 +49,10 @@ public:
 
 public:
 	void PairCheck();
+	void StraightCheck();
 	void ChangeScore(int change_score);
 	int GetScore();
+
 
 private:
 	const static int maximum_number_of_cards = 7;
