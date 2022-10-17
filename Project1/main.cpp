@@ -23,7 +23,8 @@ int main()
 		{
 
 
-			if (login.Confirm())
+			//if (login.Confirm())
+			if (login.Pass())
 			{
 				istep = 200;
 				break;

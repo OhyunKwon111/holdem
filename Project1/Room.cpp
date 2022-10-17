@@ -2,8 +2,9 @@
 
 
 Room::Room(string& name, int& istep, Login *login)
+: room_name(name)
 {
-	room_name = name;
+	//room_name = name;
 	plogin = login;
 	deck = new Deck();
 
@@ -12,7 +13,7 @@ Room::Room(string& name, int& istep, Login *login)
 	cout << room_name << "방에 오신것을 환영합니다." << endl;
 	
 
-	for (int i = 1; i <=player_num; ++i)
+	for (int i = 1; i < player_num; ++i)
 	{
 		Player* bot = new Bot(bot_money);
 		player_list.push_back(bot);
@@ -42,16 +43,19 @@ void Room::Play()
 		{
 			Deal();
 			Bet();
+			break;
 		}
 		case 200:
 		{
 			Deal();
 			Bet();
+			break;
 		}
 		case 300:
 		{
 			Deal();
 			Bet();
+			break;
 		}
 		case 400:
 		{
@@ -60,6 +64,7 @@ void Room::Play()
 			ScoreComparison();
 			cout << "게임 끝" << endl;
 			rstep =0;
+			break;
 		}
 		default:
 			break;
@@ -119,6 +124,7 @@ void Room::Deal()
 				player_list[i]->SetHand(deck->GetCard(card_order));
 			}
 		}
+		card_order = 0;
 		break;
 	}
 	default:

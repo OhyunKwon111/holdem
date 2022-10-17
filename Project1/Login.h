@@ -19,6 +19,7 @@ public:
 	bool Confirm();
 	string GetId();
 	int GetMoney();
+	bool Pass();
 	
 
 private:

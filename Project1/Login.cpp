@@ -65,6 +65,12 @@ bool Login::Confirm()
 	return false;
 }
 
+bool Login::Pass()
+{
+	player_id = "111";
+	player_money = 500000;
+	return true;
+}
 
 string Login::GetId()
 {

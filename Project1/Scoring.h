@@ -50,7 +50,9 @@ public:
 public:
 	void PairCheck();
 	void StraightCheck();
+	void FlushCheck();
 	void ChangeScore(int change_score);
+	
 	int GetScore();
 
 

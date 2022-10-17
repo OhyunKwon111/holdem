@@ -20,6 +20,7 @@ int Bot::GetScore()
 {
 	Scoring scoring(hand);
 	score = scoring.GetScore();
+	number_of_cards = 0;
 	return score;
 }
 
@@ -45,5 +46,6 @@ int User::GetScore()
 {
 	Scoring scoring(hand);
 	score = scoring.GetScore();
+	number_of_cards = 0;
 	return score;
 }
